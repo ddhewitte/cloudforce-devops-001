@@ -1,7 +1,7 @@
 # Configure the AWS Provider
 provider "aws" {
     region      = "us-east-1"
-    access_key  = "AKIAVY5FI2QE6YRCOxxx"
+    access_key  = "AKIAVY5FI2QE6YRCxxx"
     secret_key  = "4CwkvIU820LjDGNVQjW0laVZGaPetdeb8yFecxxx"
 }
 
@@ -11,6 +11,6 @@ resource "aws_instance" "my-first-instance" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = "HelloWorld"
+    Name = "ddhewitte-with-tf"
   }
 }
