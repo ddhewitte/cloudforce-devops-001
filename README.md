@@ -8,6 +8,8 @@ Cloudforce Devops 001 - Terraform X AWS
 - dokumentasi resmi terraform dan AWS
   https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance
   https://registry.terraform.io/providers/hashicorp/aws/latest/docs
+- setiap kita melakukan plan , terraform akan menjalankan refesh state untuk melihat status terakhir di cloud
+- jika kita membuat resources baru, maka resources yg lama tidak akan dirun lagi
 
 #Step untuk menjalankan terraform
 1. terraform init 			=> untuk initialize ketika script telah selesai dikerjakan
@@ -40,3 +42,10 @@ Cloudforce Devops 001 - Terraform X AWS
 
 #Step untuk menghapus seluruh infra (hati-hati!) :
 1. terraform destroy
+
+#Step untuk membuat multiple instance , menggunakan Loop :
+1. Buat resources baru
+2. Tambahkan attribut count
+3. Untuk mengambil nilai index loop bisa menggunakan perintah ${count.index}
+4. terraform plan
+5. terraform apply
